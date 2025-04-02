@@ -1,0 +1,382 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #4a90e2;
+  background-image:
+    linear-gradient(135deg, #4a90e2, #5ca9fb, #4285f4),
+    url('../public/images/header-bg.jpg');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.App-header h1,
+.App-header h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.App-header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  color: #4a90e2;
+}
+
+.Info-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #4a90e2;
+  object-fit: cover;
+}
+
+.Info-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.Projects,
+.Skills,
+.Resources,
+.Setup {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.Project-card,
+.Skill-card,
+.Resource-card,
+.Setup-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.Project-card:hover,
+.Skill-card:hover,
+.Resource-card:hover,
+.Setup-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.Project-image {
+  width: 100%;
+  height: 160px;
+  border-radius: 4px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+  border: 1px solid #f0f0f0;
+  object-fit: cover;
+}
+
+.Project-card:hover .Project-image {
+  transform: scale(1.02);
+}
+
+.Project-card h3,
+.Skill-card h3,
+.Resource-card h3,
+.Setup-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.Project-card p,
+.Skill-card p,
+.Resource-card p,
+.Setup-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.Tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.Tag {
+  background-color: #e8f0fe;
+  color: #4a90e2;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.Tag:hover {
+  background-color: #4a90e2;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.Skill-card ul {
+  padding-left: 20px;
+}
+
+.Skill-card li {
+  margin-bottom: 5px;
+}
+
+.Resource-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #e8f0fe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #4a90e2;
+  transition: transform 0.3s ease;
+}
+
+.Resource-card:hover .Resource-icon {
+  transform: scale(1.1);
+}
+
+.Code-block {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px 0;
+  overflow-x: auto;
+}
+
+.Code-block pre {
+  margin: 0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.Project-card a,
+.Resource-card a {
+  display: inline-block;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #e8f0fe;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.Project-card a:hover,
+.Resource-card a:hover {
+  background-color: #4a90e2;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.Project-card p:last-child,
+.Resource-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .Projects,
+  .Skills,
+  .Resources,
+  .Setup {
+    grid-template-columns: 1fr;
+  }
+
+  .Info-card {
+    padding: 20px;
+  }
+}
+
+/* 首页新增样式 */
+.Welcome-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.Highlights {
+  margin: 2rem 0;
+}
+
+.Highlight-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.Highlight-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.Highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.Highlight-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.Contact {
+  margin: 3rem 0;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.Contact-info {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.Contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.Contact-link:hover {
+  color: #2a6dc9;
+}
+
+.Contact-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .Highlight-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
