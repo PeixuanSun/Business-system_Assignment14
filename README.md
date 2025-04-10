@@ -13,12 +13,12 @@ A modern, responsive portfolio website built with React and TypeScript. This web
   - Learning resources
   - Development environment setup
 
-  
 ## 🧩 Components and Pages
 
 This project is structured using a component-based architecture:
 
 ### 📁 `src/components/portfolioSections`
+
 - `BasicInfo.tsx` – Personal introduction and profile image
 - `DeveloperSetupSection.tsx` – Developer tools and editor setup
 - `ResourcesSection.tsx` – Learning resource cards
@@ -26,6 +26,7 @@ This project is structured using a component-based architecture:
 - `WorkSection.tsx` – Sample project descriptions
 
 ### 📁 `src/pages`
+
 - `Home.tsx` – Main portfolio page layout
 - `Projects.tsx` – List of completed projects
 - `Resources.tsx` – Resource highlights
@@ -58,3 +59,13 @@ To run portfolio site locally, follow these steps below:
    ```
 
 4. Open your browser and go to [http://localhost:5575](http://localhost:5575) to view the react site.
+
+## ✅ Code Quality & Formatting
+
+This project uses Prettier and ESLint for formatting and linting.
+
+### Format all files (auto-fix style issues):
+```bash
+npx prettier --write 
+### Run the linter to check for code quality issues:
+npm run lint
