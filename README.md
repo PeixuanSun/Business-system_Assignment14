@@ -13,6 +13,24 @@ A modern, responsive portfolio website built with React and TypeScript. This web
   - Learning resources
   - Development environment setup
 
+  
+## 🧩 Components and Pages
+
+This project is structured using a component-based architecture:
+
+### 📁 `src/components/portfolioSections`
+- `BasicInfo.tsx` – Personal introduction and profile image
+- `DeveloperSetupSection.tsx` – Developer tools and editor setup
+- `ResourcesSection.tsx` – Learning resource cards
+- `SkillsSection.tsx` – Technologies and tools
+- `WorkSection.tsx` – Sample project descriptions
+
+### 📁 `src/pages`
+- `Home.tsx` – Main portfolio page layout
+- `Projects.tsx` – List of completed projects
+- `Resources.tsx` – Resource highlights
+- `Setup.tsx` – Developer environment overview
+
 ## Tech Stack
 
 - React 18

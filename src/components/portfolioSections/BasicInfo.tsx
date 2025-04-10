@@ -46,7 +46,7 @@ const Description = styled.p`
 const BasicInfo: React.FC = () => {
   return (
     <BasicInfoContainer>
-      <Title>张培轩的投资组合</Title>
+      <Title>peixuan的投资组合</Title>
       <Subtitle>Web开发与设计</Subtitle>
       <ProfileCard>
         <Avatar src="https://via.placeholder.com/150" alt="个人头像" />
