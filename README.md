@@ -65,7 +65,10 @@ To run portfolio site locally, follow these steps below:
 This project uses Prettier and ESLint for formatting and linting.
 
 ### Format all files (auto-fix style issues):
+
 ```bash
-npx prettier --write 
-### Run the linter to check for code quality issues:
+
+npx prettier --write .
+
 npm run lint
+```
